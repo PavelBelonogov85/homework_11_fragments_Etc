@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">homeworks from #7 etc.</string>
+    <string name="dummy">text dummy</string>
+    <string name="button_new_text">new text!</string>
+    <string name="remove">Remove</string>
+    <string name="content_hint">Content</string>
+    <string name="empty_post_error">Content must not be empty</string>
+    <string name="edit">Edit</string>
+    <string name="editing_header">Editing...</string>
+    <string name="menu_descr">Menu</string>
+    <string name="like_descr">Like</string>
+    <string name="shares_descr">shares</string>
+    <string name="chooser_share_post">Share this post</string>
+    <string name="error_empty_content">Text have to be not empty</string>
+    <string name="add_new_post">Add new post</string>
+</resources>

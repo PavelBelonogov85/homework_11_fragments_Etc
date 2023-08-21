@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MainActivity">
+
+    <!-- почему-то с recyclerview_version="2.6.0" была ошибка на androidx.recyclerview.widget.RecyclerView -->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:context=".activity.MainActivity"
+        tools:ignore="MissingClass"
+        tools:listitem="@layout/card_post"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/edit_pencil"
+        />
+
+
+    <EditText
+        android:inputType="textMultiLine"
+        android:id="@+id/content"
+        android:padding="@dimen/default_images_margin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:hint="@string/content_hint"
+        android:importantForAutofill="no"
+        app:layout_constraintEnd_toStartOf="@+id/add"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <!--<ImageView
+        android:id="@+id/save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/content"
+        app:srcCompat="@drawable/ic_save" />-->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_margin="@dimen/medium_icons_margin"
+        app:srcCompat="@drawable/ic_baseline_add_24"
+        android:contentDescription="@string/add_new_post" />
+
+    <!-- "шапка" редактирования: -->
+    <ImageView
+        android:id="@+id/edit_pencil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_edit_pencil" />
+    <ImageView
+        android:id="@+id/edit_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_cancel_24" />
+    <TextView
+        android:id="@+id/edit_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:textSize="@dimen/default_content_textSize"
+        app:layout_constraintBottom_toTopOf="@+id/content"
+        app:layout_constraintStart_toEndOf="@+id/edit_pencil"
+        android:text="@string/editing_header" />
+    <!-- объединяем несколько элементов в группу, чтобы управлять ими из кода вместе: -->
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group_edit_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:visibility="visible"
+        android:visibility="gone"
+        app:constraint_referenced_ids="edit_pencil,edit_cancel,edit_header" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

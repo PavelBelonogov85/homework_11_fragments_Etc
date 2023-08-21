@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="text_hello">
+        <item>Hi</item>
+        <item>Привет</item>
+        <item>Ola</item>
+        <item>Guten tag, lieber herr</item>
+    </string-array>
+</resources>

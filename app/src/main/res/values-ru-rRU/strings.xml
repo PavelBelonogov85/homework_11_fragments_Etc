@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">д/з с 7ой и далее</string>
+    <string name="dummy">заглушка</string>
+    <string name="button_new_text">новый текст!</string>
+    <string name="remove">Удалить</string>
+    <string name="content_hint">Пишите сюда</string>
+    <string name="empty_post_error">Контент должен быть заполнен</string>
+    <string name="edit">Редактировать</string>
+    <string name="editing_header">Редактирование...</string>
+    <string name="menu_descr">Меню</string>
+    <string name="like_descr">Нравится</string>
+    <string name="shares_descr">Поделиться</string>
+    <string name="chooser_share_post">Поделиться этим постом</string>
+    <string name="error_empty_content">Text have to be not empty</string>
+    <string name="add_new_post">Добавить новый пост</string>
+</resources>

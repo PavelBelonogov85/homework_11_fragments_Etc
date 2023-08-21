@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- градиент из серого в прозрачный: -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item
+        android:bottom="4dp"
+        android:right="4dp">
+        <shape>
+            <gradient
+                android:angle="45.0"
+                android:endColor="@android:color/transparent"
+                android:startColor="#00ff00"/>
+
+            <corners android:radius="0dp" />
+        </shape>
+    </item>
+</layer-list>
